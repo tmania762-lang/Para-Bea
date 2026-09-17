@@ -4,66 +4,203 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     min-height: 100vh;
     font-family: Georgia, serif;
-    background: linear-gradient(135deg, #120812, #2b1028, #10050f);
+    background: #10050f;
     color: white;
     overflow: hidden;
 }
 
-.inicio {
-    min-height: 100vh;
+
+/* PANTALLAS */
+
+.pantalla {
+    position: fixed;
+    inset: 0;
+
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
+
     padding: 30px;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: scale(1.05);
+
+    transition:
+        opacity 1s ease,
+        transform 1s ease,
+        visibility 1s;
 }
+
+.pantalla.activa {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+
+/* INICIO */
+
+#inicio {
+    background:
+        radial-gradient(circle at center,
+        rgba(128, 35, 95, 0.35),
+        transparent 45%),
+        linear-gradient(135deg,
+        #120812,
+        #2b1028,
+        #10050f);
+}
+
+.contenido {
+    text-align: center;
+    max-width: 700px;
+}
+
+
+/* CORAZÓN */
 
 .corazon {
     font-size: 55px;
-    animation: latido 1.5s infinite;
     margin-bottom: 25px;
+
+    animation: latido 1.5s infinite;
 }
 
+
+/* FECHA */
+
 .fecha {
-    font-size: 16px;
-    letter-spacing: 6px;
-    opacity: 0.7;
+    font-size: 15px;
+    letter-spacing: 7px;
+    opacity: 0.65;
+
     margin-bottom: 20px;
 }
+
+
+/* NOMBRE */
 
 h1 {
     font-size: clamp(70px, 20vw, 150px);
     letter-spacing: 15px;
+
     margin-bottom: 20px;
+
+    font-weight: normal;
 }
+
+
+/* MENSAJE */
 
 .mensaje {
     font-size: 20px;
-    max-width: 500px;
-    margin-bottom: 40px;
+    line-height: 1.6;
+
     opacity: 0.85;
+
+    margin-bottom: 40px;
 }
 
+
+/* BOTONES */
+
 button {
-    border: 1px solid rgba(255,255,255,0.5);
-    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.4);
+
+    background: rgba(255,255,255,0.07);
+
     color: white;
+
     padding: 16px 30px;
+
     border-radius: 50px;
+
     font-size: 16px;
+
     cursor: pointer;
+
     backdrop-filter: blur(10px);
-    transition: 0.3s;
+
+    transition: all 0.3s ease;
 }
 
 button:hover {
-    background: rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.18);
+
     transform: scale(1.05);
 }
+
+
+/* CARTA */
+
+#carta {
+    background:
+        radial-gradient(circle at center,
+        rgba(160, 45, 100, 0.3),
+        transparent 50%),
+        linear-gradient(135deg,
+        #180915,
+        #32132d,
+        #10050f);
+}
+
+.carta {
+    max-width: 650px;
+
+    text-align: center;
+
+    padding: 35px;
+}
+
+.pequeno {
+    letter-spacing: 6px;
+
+    font-size: 13px;
+
+    opacity: 0.6;
+
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 55px;
+
+    font-weight: normal;
+
+    margin-bottom: 35px;
+}
+
+.texto-carta {
+    font-size: 19px;
+
+    line-height: 1.8;
+
+    margin-bottom: 22px;
+
+    opacity: 0.9;
+}
+
+.firma {
+    margin-top: 35px;
+
+    margin-bottom: 35px;
+
+    font-size: 20px;
+
+    font-style: italic;
+}
+
+
+/* ANIMACIÓN */
 
 @keyframes latido {
 
@@ -72,6 +209,29 @@ button:hover {
     }
 
     50% {
-        transform: scale(1.2);
+        transform: scale(1.18);
     }
+}
+
+
+/* MÓVIL */
+
+@media (max-width: 600px) {
+
+    .pantalla {
+        padding: 20px;
+    }
+
+    h1 {
+        letter-spacing: 8px;
+    }
+
+    h2 {
+        font-size: 45px;
+    }
+
+    .texto-carta {
+        font-size: 17px;
+    }
+
 }
