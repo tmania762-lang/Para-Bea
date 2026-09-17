@@ -235,3 +235,81 @@ h2 {
     }
 
 }
+/* NUESTRA HISTORIA */
+
+#historia {
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(90, 45, 120, 0.3),
+            transparent 50%
+        ),
+        linear-gradient(
+            135deg,
+            #0d0818,
+            #21132f,
+            #09050e
+        );
+}
+
+.historia {
+    width: 100%;
+    max-width: 650px;
+    text-align: center;
+}
+
+.historia h2 {
+    margin-bottom: 25px;
+}
+
+.texto-historia {
+    font-size: 18px;
+    line-height: 1.8;
+    opacity: 0.85;
+    margin-bottom: 30px;
+}
+
+.recuerdo {
+    margin: 30px auto;
+    padding: 20px;
+
+    max-width: 450px;
+
+    background: rgba(255,255,255,0.06);
+
+    border: 1px solid rgba(255,255,255,0.12);
+
+    border-radius: 20px;
+
+    backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,0.35);
+}
+
+.foto-placeholder {
+    height: 180px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 55px;
+
+    background: rgba(255,255,255,0.04);
+
+    border-radius: 15px;
+
+    margin-bottom: 20px;
+}
+
+.recuerdo h3 {
+    font-size: 22px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.recuerdo p {
+    line-height: 1.6;
+    opacity: 0.75;
+}
