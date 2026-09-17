@@ -27,36 +27,70 @@
          PANTALLA DE INICIO
     ========================== -->
 
-    <section
-        id="inicio"
-        class="pantalla activa"
-    >
+    <section id="inicio" class="pantalla activa">
+    <div class="contenido">
+        <div class="corazon">❤️</div>
 
-        <div class="contenido">
+        <p class="fecha">7 · 10 · 2026</p>
 
-            <div class="corazon">
-                ❤️
+        <h1>Mi amor</h1>
+
+        <p class="mensaje">
+            He preparado algo especialmente para ti...
+        </p>
+
+        <!-- BLOQUEO HASTA EL 7 DE OCTUBRE -->
+        <div id="bloqueoSorpresa">
+
+            <div class="candado" id="candado">
+                🔒
             </div>
 
-            <p class="fecha">
-                7 · 10 · 2026
+            <p class="texto-bloqueo">
+                Esta sorpresa estará disponible el
+                <strong>7 de octubre</strong>
             </p>
 
-            <h1>
-                Mi Amor
-            </h1>
+            <div id="contador">
+                <div class="tiempo">
+                    <span id="dias">00</span>
+                    <small>DÍAS</small>
+                </div>
 
-            <p class="mensaje">
-                He preparado algo especialmente para ti...
-            </p>
+                <div class="separador">:</div>
 
-            <button onclick="abrirCarta()">
-                ✨ Abrir mi sorpresa
-            </button>
+                <div class="tiempo">
+                    <span id="horas">00</span>
+                    <small>HORAS</small>
+                </div>
+
+                <div class="separador">:</div>
+
+                <div class="tiempo">
+                    <span id="minutos">00</span>
+                    <small>MIN</small>
+                </div>
+
+                <div class="separador">:</div>
+
+                <div class="tiempo">
+                    <span id="segundos">00</span>
+                    <small>SEG</small>
+                </div>
+            </div>
 
         </div>
 
-    </section>
+        <button
+            id="botonSorpresa"
+            onclick="abrirCarta()"
+            disabled
+        >
+            🔒 La sorpresa está cerrada
+        </button>
+
+    </div>
+</section>
 
 
 
