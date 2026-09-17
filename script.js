@@ -337,3 +337,137 @@ function irFinal() {
     }, 800);
 
 }
+/* ==================================================
+   🔒 CONTADOR DE APERTURA
+================================================== */
+
+function iniciarCuentaRegresiva() {
+
+    const fechaObjetivo =
+        new Date("2026-10-07T00:00:00");
+
+    const bloqueo =
+        document.getElementById("bloqueoSorpresa");
+
+    const candado =
+        document.getElementById("candado");
+
+    const boton =
+        document.getElementById("botonSorpresa");
+
+    const dias =
+        document.getElementById("dias");
+
+    const horas =
+        document.getElementById("horas");
+
+    const minutos =
+        document.getElementById("minutos");
+
+    const segundos =
+        document.getElementById("segundos");
+
+    if (
+        !bloqueo ||
+        !candado ||
+        !boton ||
+        !dias ||
+        !horas ||
+        !minutos ||
+        !segundos
+    ) {
+        return;
+    }
+
+    function actualizarContador() {
+
+        const ahora = new Date();
+
+        let diferencia =
+            fechaObjetivo.getTime() -
+            ahora.getTime();
+
+        /* YA HA LLEGADO EL MOMENTO */
+
+        if (diferencia <= 0) {
+
+            dias.textContent = "00";
+            horas.textContent = "00";
+            minutos.textContent = "00";
+            segundos.textContent = "00";
+
+            candado.textContent = "🔓";
+            candado.classList.add("abierto");
+
+            bloqueo.classList.add("oculto");
+
+            boton.disabled = false;
+
+            boton.classList.add("desbloqueado");
+
+            boton.textContent =
+                "✨ Abrir mi sorpresa";
+
+            return true;
+        }
+
+        /* CÁLCULO DEL TIEMPO */
+
+        const totalSegundos =
+            Math.floor(diferencia / 1000);
+
+        const cantidadDias =
+            Math.floor(
+                totalSegundos / 86400
+            );
+
+        const cantidadHoras =
+            Math.floor(
+                (totalSegundos % 86400) / 3600
+            );
+
+        const cantidadMinutos =
+            Math.floor(
+                (totalSegundos % 3600) / 60
+            );
+
+        const cantidadSegundos =
+            totalSegundos % 60;
+
+        dias.textContent =
+            String(cantidadDias).padStart(2, "0");
+
+        horas.textContent =
+            String(cantidadHoras).padStart(2, "0");
+
+        minutos.textContent =
+            String(cantidadMinutos).padStart(2, "0");
+
+        segundos.textContent =
+            String(cantidadSegundos).padStart(2, "0");
+
+        return false;
+    }
+
+    /* COMPROBAR INMEDIATAMENTE */
+
+    if (actualizarContador()) {
+        return;
+    }
+
+    /* ACTUALIZAR CADA SEGUNDO */
+
+    const intervalo =
+        setInterval(() => {
+
+            if (actualizarContador()) {
+                clearInterval(intervalo);
+            }
+
+        }, 1000);
+}
+
+
+/* INICIAR EL CONTADOR */
+
+iniciarCuentaRegresiva();
