@@ -21,6 +21,13 @@ function abrirCarta() {
 
 function irHistoria() {
 
-    alert("La historia de Bea está a punto de comenzar ❤️");
+    cambiarPantalla("carta", "historia");
+
+}
+
+
+function irSentimientos() {
+
+    alert("Ahora vamos a descubrir todo lo que siento por ti ❤️");
 
 }
