@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,25 +12,74 @@
 
 <body>
 
-    <main class="inicio">
+    <!-- PANTALLA DE INICIO -->
 
-        <div class="corazon">❤️</div>
+    <section id="inicio" class="pantalla activa">
 
-        <p class="fecha">7 · 10 · 2026</p>
+        <div class="contenido">
 
-        <h1>BEA</h1>
+            <div class="corazon">❤️</div>
 
-        <p class="mensaje">
-            He preparado algo especialmente para ti...
-        </p>
+            <p class="fecha">7 · 10 · 2026</p>
 
-        <button onclick="abrirSorpresa()">
-            ✨ Abrir mi sorpresa
-        </button>
+            <h1>BEA</h1>
 
-    </main>
+            <p class="mensaje">
+                He preparado algo especialmente para ti...
+            </p>
+
+            <button onclick="abrirCarta()">
+                ✨ Abrir mi sorpresa
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- CARTA -->
+
+    <section id="carta" class="pantalla">
+
+        <div class="carta">
+
+            <div class="corazon">❤️</div>
+
+            <p class="pequeno">
+                PARA TI
+            </p>
+
+            <h2>Bea</h2>
+
+            <p class="texto-carta">
+                Hay cosas que son difíciles de explicar con palabras.
+            </p>
+
+            <p class="texto-carta">
+                Y esta página es solo una pequeña forma
+                de intentar enseñarte todo lo que significas para mí.
+            </p>
+
+            <p class="texto-carta">
+                Hoy quiero que disfrutes de tu día,
+                pero también quiero que recuerdes algo...
+            </p>
+
+            <p class="firma">
+                Esto es para ti ❤️
+            </p>
+
+            <button onclick="irHistoria()">
+                Nuestra historia →
+            </button>
+
+        </div>
+
+    </section>
+
 
     <script src="script.js"></script>
 
 </body>
+
 </html>
