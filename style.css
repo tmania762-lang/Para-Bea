@@ -715,3 +715,509 @@ h2 {
     }
 
 }
+/* ==================================================
+   🎁 REGALO
+================================================== */
+
+#sorpresa {
+    overflow: hidden;
+}
+
+#sorpresa::before {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        translate(-50%, -45%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255, 80, 170, 0.22),
+            transparent 65%
+        );
+
+    filter: blur(20px);
+
+    animation:
+        respirarLuz
+        4s ease-in-out infinite;
+
+    pointer-events: none;
+}
+
+
+/* TÍTULO */
+
+.sorpresa h2 {
+    margin-bottom: 20px;
+}
+
+.sorpresa > p {
+    font-size: 18px;
+    opacity: 0.8;
+}
+
+
+/* =========================
+   CAJA
+========================= */
+
+.regalo {
+
+    position: relative;
+
+    width: 220px;
+    height: 210px;
+
+    margin:
+        60px auto 35px;
+
+    cursor: pointer;
+
+    transform:
+        translateY(0);
+
+    transition:
+        transform 0.4s ease;
+
+    filter:
+        drop-shadow(
+            0 30px 25px
+            rgba(0, 0, 0, 0.45)
+        );
+}
+
+
+.regalo:hover {
+
+    transform:
+        translateY(-8px)
+        scale(1.04);
+}
+
+
+/* CUERPO DE LA CAJA */
+
+.caja {
+
+    position: absolute;
+
+    left: 35px;
+    bottom: 15px;
+
+    width: 150px;
+    height: 115px;
+
+    border-radius: 6px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #741747,
+            #c53f83,
+            #8c1e58
+        );
+
+    box-shadow:
+        inset 0 0 20px
+        rgba(255, 255, 255, 0.12);
+
+    z-index: 3;
+}
+
+
+/* =========================
+   TAPA
+========================= */
+
+.tapa {
+
+    position: absolute;
+
+    left: 25px;
+    top: 55px;
+
+    width: 170px;
+    height: 38px;
+
+    border-radius: 6px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #92205b,
+            #dc5795,
+            #9c215f
+        );
+
+    z-index: 5;
+
+    transform-origin:
+        center bottom;
+
+    transition:
+        transform 1s
+        cubic-bezier(.2, .8, .2, 1);
+}
+
+
+/* =========================
+   CINTA
+========================= */
+
+.lazo {
+
+    position: absolute;
+
+    left: 96px;
+    bottom: 15px;
+
+    width: 28px;
+    height: 115px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ffd7e9,
+            #fff2f8,
+            #eeb1cf
+        );
+
+    z-index: 6;
+
+    border-radius: 3px;
+
+    box-shadow:
+        0 0 10px
+        rgba(255, 210, 235, 0.25);
+}
+
+
+/* =========================
+   LAZO SUPERIOR
+========================= */
+
+.regalo::before,
+.regalo::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 18px;
+
+    width: 65px;
+    height: 42px;
+
+    border:
+        10px solid
+        #ffd7e9;
+
+    z-index: 7;
+
+    transition:
+        transform 1s ease;
+}
+
+
+.regalo::before {
+
+    left: 55px;
+
+    border-radius:
+        60% 20%
+        60% 20%;
+
+    transform:
+        rotate(25deg);
+}
+
+
+.regalo::after {
+
+    right: 55px;
+
+    border-radius:
+        20% 60%
+        20% 60%;
+
+    transform:
+        rotate(-25deg);
+}
+
+
+/* =========================
+   LUZ INTERIOR
+========================= */
+
+.regalo .luz {
+
+    position: absolute;
+
+    left: 50%;
+    top: 65px;
+
+    width: 100px;
+    height: 100px;
+
+    transform:
+        translate(-50%, -50%)
+        scale(0);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            white 0%,
+            rgba(255, 180, 225, 0.9) 20%,
+            rgba(255, 80, 180, 0.25) 55%,
+            transparent 70%
+        );
+
+    filter: blur(3px);
+
+    z-index: 2;
+
+    transition:
+        transform 1s ease;
+
+    pointer-events: none;
+}
+
+
+/* =========================
+   REGALO ABIERTO
+========================= */
+
+.regalo.abierto .tapa {
+
+    transform:
+        translateY(-85px)
+        rotate(-8deg);
+}
+
+
+.regalo.abierto::before {
+
+    transform:
+        translateX(-18px)
+        translateY(-35px)
+        rotate(-25deg);
+}
+
+
+.regalo.abierto::after {
+
+    transform:
+        translateX(18px)
+        translateY(-35px)
+        rotate(25deg);
+}
+
+
+.regalo.abierto .luz {
+
+    transform:
+        translate(-50%, -50%)
+        scale(2.8);
+}
+
+
+/* =========================
+   TEXTO
+========================= */
+
+#textoRegalo {
+
+    min-height: 35px;
+
+    font-size: 20px;
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+
+/* =========================
+   BOTÓN FINAL
+========================= */
+
+#botonFinal {
+
+    margin-top: 25px;
+
+    opacity: 0;
+}
+
+
+/* =========================
+   CORAZONES
+========================= */
+
+.corazon-volador {
+
+    position: fixed;
+
+    bottom: -50px;
+
+    pointer-events: none;
+
+    z-index: 20;
+
+    animation:
+        subirCorazon
+        var(--duracion)
+        linear
+        forwards;
+}
+
+
+/* =========================
+   ESTRELLAS
+========================= */
+
+.estrella {
+
+    position: fixed;
+
+    width: 4px;
+    height: 4px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    pointer-events: none;
+
+    z-index: 1;
+
+    animation:
+        brillar
+        var(--duracion)
+        ease-in-out
+        infinite;
+}
+
+
+/* =========================
+   ANIMACIONES
+========================= */
+
+@keyframes respirarLuz {
+
+    0%,
+    100% {
+
+        opacity: 0.6;
+
+        transform:
+            translate(-50%, -45%)
+            scale(0.9);
+    }
+
+    50% {
+
+        opacity: 1;
+
+        transform:
+            translate(-50%, -45%)
+            scale(1.15);
+    }
+}
+
+
+@keyframes subirCorazon {
+
+    0% {
+
+        transform:
+            translateY(0)
+            translateX(0)
+            rotate(0deg)
+            scale(0.6);
+
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    50% {
+
+        transform:
+            translateY(-50vh)
+            translateX(var(--movimiento))
+            rotate(20deg)
+            scale(1);
+    }
+
+    100% {
+
+        transform:
+            translateY(-115vh)
+            translateX(
+                calc(
+                    var(--movimiento) * -1
+                )
+            )
+            rotate(-20deg)
+            scale(0.7);
+
+        opacity: 0;
+    }
+}
+
+
+@keyframes brillar {
+
+    0%,
+    100% {
+
+        opacity: 0.2;
+
+        transform:
+            scale(0.5);
+    }
+
+    50% {
+
+        opacity: 1;
+
+        transform:
+            scale(1.5);
+    }
+}
+
+
+/* =========================
+   REGALO EN MÓVIL
+========================= */
+
+@media (max-width: 600px) {
+
+    .regalo {
+
+        transform:
+            scale(0.9);
+    }
+
+    .regalo:hover {
+
+        transform:
+            translateY(-8px)
+            scale(0.94);
+    }
+}
