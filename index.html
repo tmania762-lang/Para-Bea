@@ -2,25 +2,41 @@
 <html lang="es">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>Para Bea ❤️</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
 </head>
 
+
 <body>
+
 
     <!-- =========================
          PANTALLA DE INICIO
     ========================== -->
 
-    <section id="inicio" class="pantalla activa">
+    <section
+        id="inicio"
+        class="pantalla activa"
+    >
 
         <div class="contenido">
 
-            <div class="corazon">❤️</div>
+            <div class="corazon">
+                ❤️
+            </div>
 
             <p class="fecha">
                 7 · 10 · 2026
@@ -43,11 +59,15 @@
     </section>
 
 
+
     <!-- =========================
          CARTA
     ========================== -->
 
-    <section id="carta" class="pantalla">
+    <section
+        id="carta"
+        class="pantalla"
+    >
 
         <div class="carta">
 
@@ -90,11 +110,15 @@
     </section>
 
 
+
     <!-- =========================
          NUESTRA HISTORIA
     ========================== -->
 
-    <section id="historia" class="pantalla">
+    <section
+        id="historia"
+        class="pantalla"
+    >
 
         <div class="historia">
 
@@ -227,8 +251,6 @@
             </div>
 
 
-            <!-- BOTÓN SIGUIENTE -->
-
             <button onclick="irSentimientos()">
                 Lo que siento por ti ❤️
             </button>
@@ -238,11 +260,184 @@
     </section>
 
 
+
+    <!-- =========================
+         LO QUE SIENTO POR TI
+    ========================== -->
+
+    <section
+        id="sentimientos"
+        class="pantalla"
+    >
+
+        <div class="sentimientos">
+
+            <p class="pequeno">
+                LO QUE SIENTO POR TI
+            </p>
+
+            <h2>
+                Si pudiera explicarlo...
+            </h2>
+
+
+            <div class="frases">
+
+
+                <p class="frase frase1">
+                    Te quiero más de lo que muchas veces
+                    sé expresar.
+                </p>
+
+
+                <p class="frase frase2">
+                    Me encanta compartir mi vida contigo.
+                </p>
+
+
+                <p class="frase frase3">
+                    Me haces querer seguir construyendo
+                    recuerdos a tu lado.
+                </p>
+
+
+                <p class="frase frase4">
+                    Y, sobre todo...
+                </p>
+
+
+                <p class="frase frase5">
+                    quiero seguir viviendo nuestra historia.
+                    ❤️
+                </p>
+
+
+            </div>
+
+
+            <button onclick="irSorpresa()">
+                Hay algo más para ti... ✨
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         SORPRESA / REGALO
+    ========================== -->
+
+    <section
+        id="sorpresa"
+        class="pantalla"
+    >
+
+        <div class="sorpresa">
+
+            <p class="pequeno">
+                UNA ÚLTIMA COSA
+            </p>
+
+            <h2>
+                Tengo algo para ti...
+            </h2>
+
+
+            <!-- =========================
+                 REGALO
+            ========================== -->
+
+            <div
+                class="regalo"
+                onclick="abrirRegalo()"
+            >
+
+                <div class="caja"></div>
+
+                <!-- LUZ INTERIOR -->
+
+                <div class="luz"></div>
+
+                <div class="lazo"></div>
+
+            </div>
+
+
+            <p id="textoRegalo">
+                Toca el regalo ❤️
+            </p>
+
+
+            <button
+                id="botonFinal"
+                onclick="irFinal()"
+                style="display:none;"
+            >
+                Abrir mi último mensaje →
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FINAL
+    ========================== -->
+
+    <section
+        id="final"
+        class="pantalla"
+    >
+
+        <div class="final">
+
+            <div class="corazon">
+                ❤️
+            </div>
+
+            <p class="pequeno">
+                PARA BEA
+            </p>
+
+            <h2>
+                Feliz cumpleaños
+            </h2>
+
+            <h1>
+                BEA
+            </h1>
+
+            <p class="mensaje-final">
+                Espero que hoy sonrías muchísimo,
+                porque te lo mereces.
+            </p>
+
+            <p class="mensaje-final">
+                Gracias por formar parte de mi vida,
+                por todos nuestros momentos
+                y por todos los que todavía nos quedan.
+            </p>
+
+            <p class="frase-final">
+                Y todavía nos queda mucho por vivir...
+            </p>
+
+        </div>
+
+    </section>
+
+
+
     <!-- =========================
          JAVASCRIPT
     ========================== -->
 
     <script src="script.js"></script>
+
 
 </body>
 
