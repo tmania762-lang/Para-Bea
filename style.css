@@ -1221,3 +1221,159 @@ h2 {
             scale(0.94);
     }
 }
+/* ==================================================
+   🔒 BLOQUEO DE LA SORPRESA
+================================================== */
+
+#bloqueoSorpresa {
+    margin: 25px auto 25px;
+    text-align: center;
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.candado {
+    font-size: 55px;
+    margin-bottom: 12px;
+    animation:
+        latidoCandado
+        2s ease-in-out infinite;
+}
+
+.texto-bloqueo {
+    margin: 10px auto 20px;
+    font-size: 15px;
+    line-height: 1.5;
+    opacity: 0.85;
+}
+
+.texto-bloqueo strong {
+    display: inline-block;
+}
+
+#contador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin: 20px auto 25px;
+}
+
+.tiempo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 55px;
+}
+
+.tiempo span {
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.tiempo small {
+    margin-top: 6px;
+    font-size: 8px;
+    letter-spacing: 1px;
+    opacity: 0.65;
+}
+
+.separador {
+    font-size: 23px;
+    font-weight: bold;
+    opacity: 0.5;
+    margin-bottom: 15px;
+}
+
+/* BOTÓN BLOQUEADO */
+
+#botonSorpresa {
+    opacity: 0.55;
+    cursor: not-allowed;
+    transition:
+        all 0.5s ease;
+}
+
+/* BOTÓN DESBLOQUEADO */
+
+#botonSorpresa.desbloqueado {
+    opacity: 1;
+    cursor: pointer;
+    transform: scale(1);
+    animation:
+        botonDesbloqueado
+        2s ease-in-out infinite;
+}
+
+/* CUANDO SE ABRE */
+
+#bloqueoSorpresa.oculto {
+    opacity: 0;
+    transform: translateY(-15px);
+    pointer-events: none;
+    max-height: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.candado.abierto {
+    animation: none;
+}
+
+/* ANIMACIONES */
+
+@keyframes latidoCandado {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+}
+
+@keyframes botonDesbloqueado {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.04);
+    }
+}
+
+/* MÓVIL */
+
+@media (max-width: 600px) {
+
+    #contador {
+        gap: 4px;
+    }
+
+    .tiempo {
+        min-width: 48px;
+    }
+
+    .tiempo span {
+        font-size: 22px;
+    }
+
+    .tiempo small {
+        font-size: 7px;
+    }
+
+    .separador {
+        font-size: 19px;
+    }
+
+    .candado {
+        font-size: 48px;
+    }
+
+    .texto-bloqueo {
+        font-size: 14px;
+        padding: 0 15px;
+    }
+}
