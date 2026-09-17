@@ -1,33 +1,68 @@
+/* =========================
+   CAMBIO DE PANTALLAS
+========================= */
+
 function cambiarPantalla(actual, siguiente) {
 
-    document.getElementById(actual)
-        .classList.remove("activa");
+    const pantallaActual =
+        document.getElementById(actual);
+
+    const pantallaSiguiente =
+        document.getElementById(siguiente);
+
+
+    if (!pantallaActual || !pantallaSiguiente) {
+        return;
+    }
+
+
+    pantallaActual.classList.remove("activa");
+
 
     setTimeout(() => {
 
-        document.getElementById(siguiente)
-            .classList.add("activa");
+        pantallaSiguiente.classList.add("activa");
 
     }, 500);
 }
 
 
+/* =========================
+   ABRIR CARTA
+========================= */
+
 function abrirCarta() {
 
-    cambiarPantalla("inicio", "carta");
+    cambiarPantalla(
+        "inicio",
+        "carta"
+    );
 
 }
 
+
+/* =========================
+   IR A NUESTRA HISTORIA
+========================= */
 
 function irHistoria() {
 
-    cambiarPantalla("carta", "historia");
+    cambiarPantalla(
+        "carta",
+        "historia"
+    );
 
 }
 
 
+/* =========================
+   IR A SENTIMIENTOS
+========================= */
+
 function irSentimientos() {
 
-    alert("Ahora vamos a descubrir todo lo que siento por ti ❤️");
+    alert(
+        "❤️ Bea, todavía queda mucho por descubrir..."
+    );
 
 }
