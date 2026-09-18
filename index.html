@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Para Mi amor ❤️</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         PANTALLA DE INICIO
+    ========================== -->
+
+    <section id="inicio" class="pantalla activa">
+
+        <div class="contenido">
+
+            <div class="corazon">❤️</div>
+
+            <p class="fecha">7 · 10 · 2026</p>
+
+            <h1>Mi amor</h1>
+
+            <p class="mensaje">
+                He preparado algo especialmente para ti...
+            </p>
+
+
+            <!-- =========================
+                 BLOQUEO / MODO PRUEBA
+            ========================== -->
+
+            <div id="bloqueoSorpresa">
+
+                <div class="candado" id="candado">
+                    🔒
+                </div>
+
+                <p class="texto-bloqueo">
+                    Esta sorpresa estará disponible el
+                    <strong>7 de octubre</strong>
+                </p>
+
+                <div id="contador">
+
+                    <div class="tiempo">
+                        <span id="dias">00</span>
+                        <small>DÍAS</small>
+                    </div>
+
+                    <div class="separador">:</div>
+
+                    <div class="tiempo">
+                        <span id="horas">00</span>
+                        <small>HORAS</small>
+                    </div>
+
+                    <div class="separador">:</div>
+
+                    <div class="tiempo">
+                        <span id="minutos">00</span>
+                        <small>MIN</small>
+                    </div>
+
+                    <div class="separador">:</div>
+
+                    <div class="tiempo">
+                        <span id="segundos">00</span>
+                        <small>SEG</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <button
+                id="botonSorpresa"
+                onclick="abrirCarta()"
+                disabled
+            >
+                🔒 La sorpresa está cerrada
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         CARTA
+    ========================== -->
+
+    <section
+        id="carta"
+        class="pantalla"
+    >
+
+        <div class="carta">
+
+            <div class="corazon">
+                ❤️
+            </div>
+
+            <p class="pequeno">
+                PARA TI
+            </p>
+
+            <h2>
+                Mi Amor
+            </h2>
+
+            <p class="texto-carta">
+                Hay cosas que son difíciles de explicar con palabras.
+            </p>
+
+            <p class="texto-carta">
+                Y esta página es solo una pequeña forma
+                de intentar enseñarte todo lo que significas para mí.
+            </p>
+
+            <p class="texto-carta">
+                Hoy quiero que disfrutes de tu día,
+                pero también quiero que recuerdes algo...
+            </p>
+
+            <p class="firma">
+                Esto es para ti ❤️
+            </p>
+
+            <button onclick="irHistoria()">
+                Nuestra historia →
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         NUESTRA HISTORIA
+    ========================== -->
+
+    <section
+        id="historia"
+        class="pantalla"
+    >
+
+        <div class="historia">
+
+            <p class="pequeno">
+                NUESTRA HISTORIA
+            </p>
+
+            <h2>
+                Momentos que son nuestros
+            </h2>
+
+            <p class="texto-historia">
+                Cada recuerdo tiene una historia.
+                Y esta es solo una pequeña parte de la nuestra.
+            </p>
+
+
+            <!-- =========================
+                 SECCIÓN 1
+                 CUANDO EMPEZÓ TODO
+            ========================== -->
+
+            <div class="seccion-recuerdos">
+
+                <span class="fecha-recuerdo">
+                    CUANDO EMPEZÓ TODO
+                </span>
+
+                <h3>
+                    Nuestros primeros momentos
+                </h3>
+
+                <p class="frase-seccion">
+                    Y sin darnos cuenta, empezó nuestra historia. ❤️
+                </p>
+
+
+                <div class="galeria galeria-tres">
+
+                    <div class="foto-recuerdo">
+                        <img
+                            src="assets/fotos/foto1.jpg"
+                            alt="Nuestro comienzo"
+                        >
+                    </div>
+
+                    <div class="foto-recuerdo">
+                        <img
+                            src="assets/fotos/foto2.jpg"
+                            alt="Nuestros primeros momentos"
+                        >
+                    </div>
+
+                    <div class="foto-recuerdo">
+                        <img
+                            src="assets/fotos/foto3.jpg"
+                            alt="Un recuerdo de nuestros comienzos"
+                        >
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================
+                 SECCIÓN 2
+                 CANTABRIA
+            ========================== -->
+
+            <div class="seccion-recuerdos">
+
+                <span class="fecha-recuerdo">
+                    NUESTRO VIAJE
+                </span>
+
+                <h3>
+                    Cantabria
+                </h3>
+
+                <p class="frase-seccion">
+                    Otro viaje, otro recuerdo que guardar para siempre. 🏔️
+                </p>
+
+
+                <div class="galeria galeria-dos">
+
+                    <div class="foto-recuerdo">
+                        <img
+                            src="assets/fotos/foto4.jpg"
+                            alt="Nuestro viaje a Cantabria"
+                        >
+                    </div>
+
+                    <div class="foto-recuerdo">
+                        <img
+                            src="assets/fotos/foto5.jpg"
+                            alt="Recuerdo de nuestro viaje a Cantabria"
+                        >
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================
+                 SECCIÓN 3
+                 RECUERDOS ESPECIALES
+            ========================== -->
+
+            <div class="seccion-recuerdos">
+
+                <span class="fecha-recuerdo">
+                    RECUERDOS QUE GUARDAMOS
+                </span>
+
+                <h3>
+                    Momentos que siempre recordaremos
+                </h3>
+
+                <p class="frase-seccion">
+                    Porque los mejores momentos son los que vivimos juntos. ❤️
+                </p>
+
+
+                <div class="galeria galeria-dos">
+
+                    <div class="foto-recuerdo">
+
+                        <img
+                            src="assets/fotos/foto6.jpg"
+                            alt="Bea con la carpa que pescó"
+                        >
+
+                        <p class="pie-foto">
+                            Un recuerdo de aquella gran carpa. 🎣
+                        </p>
+
+                    </div>
+
+
+                    <div class="foto-recuerdo">
+
+                        <img
+                            src="assets/fotos/foto7.jpg"
+                            alt="Nosotros juntos sujetando la tarta"
+                        >
+
+                        <p class="pie-foto">
+                            Nosotros dos y un cumpleaños para recordar. 🎂
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <button onclick="irSentimientos()">
+                Lo que siento por ti ❤️
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         LO QUE SIENTO POR TI
+    ========================== -->
+
+    <section
+        id="sentimientos"
+        class="pantalla"
+    >
+
+        <div class="sentimientos">
+
+            <p class="pequeno">
+                LO QUE SIENTO POR TI
+            </p>
+
+            <h2>
+                Si pudiera explicarlo...
+            </h2>
+
+
+            <div class="frases">
+
+                <p class="frase frase1">
+                    Te quiero más de lo que muchas veces
+                    sé expresar.
+                </p>
+
+                <p class="frase frase2">
+                    Me encanta compartir mi vida contigo.
+                </p>
+
+                <p class="frase frase3">
+                    Me haces querer seguir construyendo
+                    recuerdos a tu lado.
+                </p>
+
+                <p class="frase frase4">
+                    Y, sobre todo...
+                </p>
+
+                <p class="frase frase5">
+                    quiero seguir viviendo nuestra historia.
+                    ❤️
+                </p>
+
+            </div>
+
+
+            <button onclick="irSorpresa()">
+                Hay algo más para ti... ✨
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         SORPRESA / REGALO
+    ========================== -->
+
+    <section
+        id="sorpresa"
+        class="pantalla"
+    >
+
+        <div class="sorpresa">
+
+            <p class="pequeno">
+                UNA ÚLTIMA COSA
+            </p>
+
+            <h2>
+                Tengo algo para ti...
+            </h2>
+
+            <p class="frase-regalo">
+                Hay recuerdos que pasan...
+                y otros que se quedan para siempre
+                en el corazón. ❤️
+            </p>
+
+            <p class="subfrase-regalo">
+                Este es uno de ellos.
+            </p>
+
+
+            <!-- =========================
+                 REGALO
+            ========================== -->
+
+            <div
+                class="regalo"
+                onclick="abrirRegalo()"
+            >
+
+                <div class="caja"></div>
+
+                <div class="tapa"></div>
+
+                <div class="luz"></div>
+
+                <div class="lazo"></div>
+
+            </div>
+
+
+            <p id="textoRegalo">
+                Toca el regalo ❤️
+            </p>
+
+
+            <button
+                id="botonFinal"
+                onclick="irFinal()"
+                style="display:none;"
+            >
+                Abrir mi último mensaje →
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FINAL
+    ========================== -->
+
+    <section
+        id="final"
+        class="pantalla"
+    >
+
+        <div class="final">
+
+            <div class="corazon">
+                ❤️
+            </div>
+
+            <p class="pequeno">
+                PARA MI AMOR
+            </p>
+
+            <h2>
+                Feliz cumpleaños
+            </h2>
+
+            <h1>
+                Mi Amor
+            </h1>
+
+            <p class="mensaje-final">
+                Espero que hoy sonrías muchísimo,
+                porque te lo mereces.
+            </p>
+
+            <p class="mensaje-final">
+                Gracias por formar parte de mi vida,
+                por todos nuestros momentos
+                y por todos los que todavía nos quedan.
+            </p>
+
+            <p class="frase-final">
+                Y todavía nos queda mucho por vivir...
+                Te quiero ❤️
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
