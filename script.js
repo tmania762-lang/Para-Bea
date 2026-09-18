@@ -9,7 +9,7 @@
 ================================================== */
 
 /*
-   MODO_PRUEBA = true
+   MODO_PRUEBA = false
    Permite entrar a la sorpresa inmediatamente.
 
    Cuando la página esté terminada:
