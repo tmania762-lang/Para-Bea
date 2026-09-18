@@ -9,7 +9,7 @@
 ================================================== */
 
 /*
-   MODO_PRUEBA = false
+   MODO_PRUEBA = true
    Permite entrar a la sorpresa inmediatamente.
 
    Cuando la página esté terminada:
@@ -19,7 +19,7 @@
    hasta el 7 de octubre de 2026.
 */
 
-const MODO_PRUEBA = true;
+const MODO_PRUEBA = false;
 
 
 /* ==================================================
